@@ -1,0 +1,59 @@
+
+/* Heading Alingment */
+h1{
+    text-align: center;
+    font-size: 2.0rem;
+}
+
+/* Header Style */
+header{
+    max-width: 550px;
+    margin: 1rem auto;
+    background-color:grey;
+    padding: 1rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+}
+
+body{
+    padding: 2rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:#57a6a7 ;
+    color: var(--text-color);
+}
+
+h3,header,ul{
+    margin-bottom: 0.5rem;
+}
+
+header div{
+    flex-basis: 100%;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+
+header h5{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: darkgoldenrod;
+}
+
+form button{
+    width: 100%;
+    padding: 10px;
+    border:1px solid #ddd;
+    border-radius: 5px ;
+    margin-bottom: 5px;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
