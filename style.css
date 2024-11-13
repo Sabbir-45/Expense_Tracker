@@ -57,3 +57,41 @@ form button{
     text-transform: uppercase;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
+
+form label{
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+input#type{
+    appearance: none;
+    position: absolute;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+
+#status{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+footer{
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
