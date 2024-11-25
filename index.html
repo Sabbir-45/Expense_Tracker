@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Expense Tracker</title>
+</head>
+
+<body>
+    <div>
+        <h3 style="color:chocolate; font-size: 1.3rem;">Expense Tracker</h3>
+    </div>
+    <div class="summary">
+        <div>
+            <h1>Balance:
+                <span id="updatedBal">0</span>
+            </h1>
+        </div>
+        <br />
+        <div class="total">
+            <div>
+                Total Income:
+                <div>
+                    <h2 id="updatedInc">0</h2>
+                </div>
+            </div>
+            <hr class="verticle" />
+            <div>
+                Total Expenses:
+                <div>
+                    <h2 id="updatedExp">0</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="root">
+        <div id="items">
+            <h2 style="font-size: 1.3rem; color: chocolate;">Transaction Summary</h2>
+            <!-- Add Wrapper for scrolling bar -->
+            <div id="table-container">
+                <table id="table">
+                    <tr class="titles">
+                        <th>S.no.</th>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr class="vertical" />
+        <div id="new" class="add-transaction-container">
+            <h2 style="font-size: 1.3rem; font-weight: bold; color: #333; color: chocolate;">Add Transaction</h2>
+            <div class="inputs">
+                <div class="inputitem">
+                    <label for="itemType">Entry type:</label>
+                    <select id="itemType">
+                        <option value="" disabled selected>Select type</option>
+                        <option value="0">Expense</option>
+                        <option value="1">Income</option>
+                    </select>
+                </div>
+                <div class="inputitem">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" placeholder="Enter name" />
+                </div>
+                <div class="inputitem">
+                    <label for="amount">Amount:</label>
+                    <input id="amount" type="number" placeholder="Enter amount" />
+                </div>
+            </div>
+            <button class="add-transaction-btn" onclick="addItem()">Add Transaction</button>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <h3>Developed By NAKIB AL HASAN SABBIR</h3>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
