@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2;
+    height: 100vh; 
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Updated Expense Summary Section */
+.summary {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    padding: 1.5%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradient background */
+    font-size: 1.5rem;
+    border-radius: 15px; /* Rounded corners */
+    border: 2px solid #f5d6a1;
+}
+
+/* Balance Section */
+.summary h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px #aaa;
+}
+
+#updatedBal {
+    color: #28a745; /* Green for balance */
+}
+
+/* Total Section */
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #ddd; /* Separator line */
+    border-bottom: 1px solid #ddd;
+}
+
+.total > div {
+    width: 45%;
+    text-align: center;
+}
+
+#updatedInc {
+    color: green; /* Green for income */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #9be89b;
+}
+
+#updatedExp {
+    color: red; /* Red for expenses */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #ffaaaa;
+}
+
+/* Vertical Separator */
+.verticle {
+    border-left: 2px solid #bbb;
+    height: auto;
+    margin: 0 10px;
+}
+
