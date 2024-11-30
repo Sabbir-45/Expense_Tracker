@@ -5,7 +5,7 @@ function saveToLocalStorage() {
 }
 
 // Load transactions from local storage when the page loads
-window.relaoad = function () {
+window.onload = function () {
     const storedTransactions = localStorage.getItem("transactions");
     if (storedTransactions) {
         transactions = JSON.parse(storedTransactions);
@@ -100,9 +100,9 @@ function updateBalance() {
         }
     });
 
-    document.getElementById("updatedInc").innerText = income.toFixed(2);
-    document.getElementById("updatedExp").innerText = expense.toFixed(2);
-    document.getElementById("updatedBal").innerText = (income - expense).toFixed(2);
+    document.getElementById("updateIncome").innerText = income.toFixed(2);
+    document.getElementById("updateExpense").innerText = expense.toFixed(2);
+    document.getElementById("updateBalance").innerText = (income - expense).toFixed(2);
 }
 
 function clearForm() {
