@@ -36,7 +36,7 @@ body {
     text-shadow: 1px 1px 2px #aaa;
 }
 
-#updatedBal {
+#updateBalance {
     color: #28a745; /* Green for balance */
 }
 
@@ -58,14 +58,14 @@ body {
     text-align: center;
 }
 
-#updatedInc {
+#updateIncome {
     color: green; /* Green for income */
     font-size: 1.5rem;
     font-weight: bold;
     text-shadow: 1px 1px 2px #9be89b;
 }
 
-#updatedExp {
+#updateExpense {
     color: red; /* Red for expenses */
     font-size: 1.5rem;
     font-weight: bold;
@@ -79,3 +79,155 @@ body {
     margin: 0 10px;
 }
 
+
+/* Root Flex Container */
+.root {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%; /* Adjusted for responsiveness */
+    margin-top: 5px;
+}
+
+/* Transaction Summary */
+#items {
+    width: 65%;
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 400px; /* Set height limit */
+    overflow-y: auto; /* Enable vertical scroll */
+    align-items: center;
+}
+
+#table-container {
+    max-height: 265px;
+    overflow-y: auto; /* Scroll bar for transactions */
+    scrollbar-width: none;
+}
+
+table {
+    width: 100%;
+    border-collapse:collapse;
+    font-size: 0.9rem;
+}
+
+
+#items h2 {
+    font-size: 1.2rem;
+    color:chocolate; /* New color: Slate Blue */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Ensure header stays above table rows */
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: rgb(116, 216, 116);
+}
+
+
+td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+    background-color: whitesmoke;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+#new {
+    width: 25%;
+    background-color: #ffffff;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} 
+
+/* Add Transaction Input Fields */
+#new .inputs {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 3px; /* Add space between each field */
+}
+
+#new .inputitem {
+    display: flex;
+    flex-direction: column; /* Align label above the input */
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style for the labels */
+#new .inputitem label {
+    margin-bottom: 5px; /* Add space between the label and the input */
+    font-size: 1rem;
+    color: #6a5acd; /* Same Slate Blue color for consistency */
+}
+
+/* Style for the input fields */
+#new .inputitem input,
+#new .inputitem select {
+    width: 100%;
+    padding: 2px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Add inner shadow for depth */
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+
+#new h2 {
+    font-size: 1.2rem;
+    color:chocolate; /* New color: Slate Blue */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.add-transaction-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.add-transaction-btn:hover {
+    background-color: #218838;
+}
+
+/* Footer Style */
+/* Footer */
+footer {
+    text-align: center;
+    width: 100%; /* Full-width footer */
+    background-color: #f4f4f4;
+    font-size: 0.7rem;
+    color: #555;
+    position: fixed; /* Make footer fixed at the bottom */
+    bottom: 0; /* Align to the bottom of the page */
+    left: 0;
+}
