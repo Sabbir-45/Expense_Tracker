@@ -129,7 +129,8 @@ th {
     top: 0;
     z-index: 1; /* Ensure header stays above table rows */
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
+    border-radius: 5px ;
     background-color: rgb(116, 216, 116);
 }
 
@@ -190,7 +191,6 @@ tr:nth-child(even) {
     transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
-
 #new h2 {
     font-size: 1.2rem;
     color:chocolate; /* New color: Slate Blue */
@@ -234,11 +234,11 @@ footer {
 
 .toast {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     background-color: #f44336; /* Red for warning */
     color: white;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 1rem;
