@@ -103,6 +103,16 @@ function updateBalance() {
     document.getElementById("updateIncome").innerText = income.toFixed(2);
     document.getElementById("updateExpense").innerText = expense.toFixed(2);
     document.getElementById("updateBalance").innerText = (income - expense).toFixed(2);
+
+  // Show toast if expenses exceed income
+  if (expense > income) {
+    showToast("Warning: Expenses exceed income!");
+}
+
+else {
+    // Hide the toast if expenses are no longer greater than income
+    toast.classList.remove("show");
+}
 }
 
 function clearForm() {
@@ -112,3 +122,10 @@ function clearForm() {
     document.getElementById("date").value = "";
 }
 
+// Toast function
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.classList.remove("hidden");
+    toast.classList.add("show");
+}
