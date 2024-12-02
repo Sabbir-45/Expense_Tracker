@@ -1,10 +1,11 @@
-let transactions = []; // To store all transactions
+//stroge all transaction here
+let transactions = []; 
 
 function saveToLocalStorage() {
     localStorage.setItem("transactions", JSON.stringify(transactions));
 }
 
-// Load transactions from local storage when the page loads
+// Load transactions from local storage when page loads
 window.onload = function () {
     const storedTransactions = localStorage.getItem("transactions");
     if (storedTransactions) {
@@ -24,16 +25,17 @@ function addItem() {
         return;
     }
 
-    transactions.push({ type, name, amount, date }); // Add new transaction to the array
+//Add Transaction in a new array
+    transactions.push({ type, name, amount, date }); 
     saveToLocalStorage();
     renderTable();
     clearForm();
 }
 
 function deleteItem(index) {
-    transactions.splice(index, 1);// Remove transaction by index
+    transactions.splice(index, 1);
     saveToLocalStorage();
-    renderTable(); // Re-render the table to update serial numbers
+    renderTable(); 
 }
 
 function editItem(index) {
@@ -54,7 +56,9 @@ function editItem(index) {
 function renderTable() {
     const table = document.getElementById("table");
 
-    // Clear the table except for the header row
+    // Clear the table  without the table hearer row
+    //this is to stick my header in the transaction
+    
     table.innerHTML = `
         <tr class="titles">
             <th>S.no.</th>
@@ -67,7 +71,7 @@ function renderTable() {
         </tr>
     `;
 
-    // Add each transaction as a row
+    // Add every transaction as a row
     transactions.forEach((transaction, index) => {
         const row = document.createElement("tr");
 
@@ -104,13 +108,13 @@ function updateBalance() {
     document.getElementById("updateExpense").innerText = expense.toFixed(2);
     document.getElementById("updateBalance").innerText = (income - expense).toFixed(2);
 
-  // Show toast if expenses exceed income
+  // toast if expenses exceed income
   if (expense > income) {
     showToast("Warning: Expenses exceed income!");
 }
 
 else {
-    // Hide the toast if expenses are no longer greater than income
+    // Hide the toast if expenses are not  greater than income
     toast.classList.remove("show");
 }
 }
