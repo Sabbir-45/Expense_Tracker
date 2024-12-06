@@ -7,7 +7,8 @@ body {
     margin: 0;
     padding: 2;
     height: 100vh; 
-    overflow: hidden; /* Prevent scrolling */
+    /* this is used for preventing the scrolling */
+    overflow: hidden; 
 }
 
 /* Updated Expense Summary Section */
@@ -21,9 +22,10 @@ body {
     margin-bottom: 25px;
     padding: 1.5%;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradient background */
+    /* Linerar gradient used for background colour */
+    background: linear-gradient(to right, #ffecd2, #fcb69f); 
     font-size: 1.5rem;
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 15px; 
     border: 2px solid #f5d6a1;
 }
 
@@ -37,7 +39,7 @@ body {
 }
 
 #updateBalance {
-    color: #28a745; /* Green for balance */
+    color: #28a745; 
 }
 
 /* Total Section */
@@ -49,7 +51,7 @@ body {
     font-weight: bold;
     width: 100%;
     padding: 10px 0;
-    border-top: 1px solid #ddd; /* Separator line */
+    border-top: 1px solid #ddd; 
     border-bottom: 1px solid #ddd;
 }
 
@@ -59,14 +61,14 @@ body {
 }
 
 #updateIncome {
-    color: green; /* Green for income */
+    color: green; 
     font-size: 1.5rem;
     font-weight: bold;
     text-shadow: 1px 1px 2px #9be89b;
 }
 
 #updateExpense {
-    color: red; /* Red for expenses */
+    color: red; 
     font-size: 1.5rem;
     font-weight: bold;
     text-shadow: 1px 1px 2px #ffaaaa;
@@ -85,7 +87,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 90%; /* Adjusted for responsiveness */
+    width: 90%; 
     margin-top: 5px;
 }
 
@@ -97,14 +99,16 @@ body {
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-height: 400px; /* Set height limit */
-    overflow-y: auto; /* Enable vertical scroll */
+    max-height: 400px; 
+    /* Enable the vertical flow */
+    overflow-y: auto; 
     align-items: center;
 }
 
 #table-container {
     max-height: 265px;
-    overflow-y: auto; /* Scroll bar for transactions */
+    /* Scroll bar for transactions */
+    overflow-y: auto; 
     scrollbar-width: none;
 }
 
@@ -117,17 +121,18 @@ table {
 
 #items h2 {
     font-size: 1.2rem;
-    color:chocolate; /* New color: Slate Blue */
+    color:chocolate; 
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
     margin-top: 5px;
 }
 
+/* this code is used for header which is always stict above */
 th {
     position: sticky;
     top: 0;
-    z-index: 1; /* Ensure header stays above table rows */
+    z-index: 1; 
     padding: 8px;
     border: 2px solid #ddd;
     border-radius: 5px ;
@@ -160,8 +165,7 @@ tr:nth-child(even) {
 /* Add Transaction Input Fields */
 #new .inputs {
     display: flex;
-    flex-direction: column; /* Stack inputs vertically */
-    gap: 3px; /* Add space between each field */
+    flex-direction: column; 
 }
 
 #new .inputitem {
@@ -174,9 +178,9 @@ tr:nth-child(even) {
 
 /* Style for the labels */
 #new .inputitem label {
-    margin-bottom: 5px; /* Add space between the label and the input */
+    margin-bottom: 5px; 
     font-size: 1rem;
-    color: #6a5acd; /* Same Slate Blue color for consistency */
+    color: #6a5acd; 
 }
 
 /* Style for the input fields */
@@ -187,8 +191,8 @@ tr:nth-child(even) {
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Add inner shadow for depth */
-    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: border 0.3s ease, box-shadow 0.3s ease; 
 }
 
 #new h2 {
@@ -227,8 +231,8 @@ footer {
     background-color: #f4f4f4;
     font-size: 0.7rem;
     color: #555;
-    position: fixed; /* Make footer fixed at the bottom */
-    bottom: 0; /* Align to the bottom of the page */
+    position: fixed; 
+    bottom: 0; 
     left: 0;
 }
 
@@ -236,14 +240,15 @@ footer {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: #f44336; /* Red for warning */
+    background-color: #f44336; 
     color: white;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 1rem;
     z-index: 1000;
-    opacity: 0; /* Hidden by default */
+    /* Toast hidden by default */
+    opacity: 0; 
     transform: translateY(20px);
     transition: opacity 0.3s, transform 0.3s;
 }
@@ -253,5 +258,31 @@ footer {
     transform: translateY(0);
 }
 
+/* Logout Button Style */
+.logout-btn {
+    position: absolute;
+    /* Distance from the top */
+    top: 20px;
+    /* Distance from the right */ 
+    right: 20px; 
+    /* Red background for logout */
+    background-color: #f44336;
+    color: white;
+    font-size: 1rem;
+     /*Better Spacing  */
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-weight: bold;
+    /* Hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    z-index: 10; /* Make sure the button is above other content */
+}
+
+.logout-btn:active {
+    background-color: #c62828; 
+    transform: scale(1); 
+}
 
 

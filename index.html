@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Expense Tracker</title>
 </head>
 
 <body>
+  <header>
+    <div class="navbar">
+        <button id="logoutButton" class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+</header>
     <div>
         <h3 style="color:chocolate; font-size: 1.3rem;">Expense Tracker</h3>
     </div>
@@ -85,12 +90,13 @@
     </div>
     <!-- Toast Div -->
     <div id="toast" class="toast hidden"></div>
+
     <!-- Footer -->
     <footer>
         <h3>Developed By NAKIB AL HASAN SABBIR</h3>
     </footer>
 
-    <script src="/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
