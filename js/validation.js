@@ -18,7 +18,7 @@ document.getElementById("registerForm")?.addEventListener("submit", function (e)
         return;
     }
 
-    // Save user data to local storage
+    // Save  data to local storage
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const existingUser = users.find((user) => user.email === email);
 
@@ -30,7 +30,8 @@ document.getElementById("registerForm")?.addEventListener("submit", function (e)
     users.push({ name, email, password });
     localStorage.setItem("users", JSON.stringify(users));
     alert("Registration successful! Redirecting to login.");
-    window.location.href = "login.html"; // Redirect to login page
+    // Here it redirect to login page
+    window.location.href = "login.html"; 
 });
 
 // Login validation check

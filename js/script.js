@@ -38,8 +38,19 @@ function addItem() {
         return;
     }
 
+
+// If i want to add transaction (expense with - sing)
+    // if (type !== "1") {
+    //     amount = -Math.abs(amount);
+    // }
+
+
+
+// Here transaction is added in the transaction array
     transactions.push({ type, name, amount, date });
-    saveToLocalStorage();  // Save after adding
+    // Transaction saved in the local storage
+    saveToLocalStorage(); 
+    // It used for Rrfresh the table
     renderTable();
     clearForm();
 }
